@@ -2,13 +2,17 @@ import React from "react";
 import styles from "./profile.module.sass";
 import alps from "../../img/alps.png";
 import avatar from "../../img/avatar.jpg";
+import MyPosts from "./MyPosts/MyPosts";
 
 let Profile = () => {
   return (
+    
     <div className={styles.profile}>
+
       <div>
         <img src={alps} alt="alps"></img>
       </div>
+
       <div>
         <div>
           <img src={avatar} alt="avatar" className={styles.avatar}></img>
@@ -17,20 +21,13 @@ let Profile = () => {
           <p>Avatar</p>
         </div>
       </div>
+
       <div>
         <p>Discription</p>
       </div>
-      <div>
-        <p>New post</p>
-      </div>
-      <div>
-        <div>
-          <p>Post1</p>
-        </div>
-        <div>
-          <p>Post2</p>
-        </div>
-      </div>
+
+      <MyPosts/>
+
     </div>
   );
 };
